@@ -623,6 +623,9 @@ footer .copyright {
 }
 
 @media (max-width: 477px) {
+  body{
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
   .section-p1 {
     padding: 20px;
   }
