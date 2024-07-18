@@ -621,21 +621,12 @@ footer .copyright {
     width: 70%;
   }
 }
+ 
+
+ 
 
 @media (max-width: 477px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevents scrolling */
-}
 
-  .fullscreen-container {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    
-}
   .section-p1 {
     padding: 20px;
   }
