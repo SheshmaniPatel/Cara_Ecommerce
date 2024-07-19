@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartContainer = document.getElementById("cart-container");
   const subtotalElement = document.getElementById("subtotal");
   const totalElement = document.getElementById("total");
+  const discount = document.getElementById("discount");
   const applyCouponButton = document.getElementById("apply-coupon");
   const couponCodeInput = document.getElementById("coupon-code");
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -128,8 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply discount if previously applied
     const finalSubtotal = discountApplied ? subtotal * 0.9 : subtotal;
 
-    subtotalElement.textContent = finalSubtotal.toFixed(2);
+    subtotalElement.textContent = subtotal.toFixed(2);
     totalElement.textContent = (finalSubtotal + shippingCost).toFixed(2);
+    discount.textContent = discountApplied ?  "-10%" : "0.0%";
   };
 
   applyCouponButton.addEventListener("click", () => {
